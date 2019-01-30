@@ -1,0 +1,32 @@
+{
+  "name": "hangouts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "iohook": "^0.2.0"
+  },
+  "devDependencies": {
+    "electron": "^2.0.9",
+    "electron-packager": "^12.1.2"
+  },
+  "scripts": {
+    "package": "./node_modules/electron-packager/cli.js ./ hangouts-chat --overwrite",
+    "start": "./node_modules/electron/dist/electron main.js",
+    "install": "sudo cp -r hangouts-chat-linux-x64/* /usr/share/hangouts-chat-linux-x64"
+  },
+  "author": "",
+  "license": "ISC",
+  "iohook": {
+    "targets": [
+      "electron-57"
+    ],
+    "platforms": [
+      "linux"
+    ],
+    "arches": [
+      "x64",
+      "ia32"
+    ]
+  }
+}
